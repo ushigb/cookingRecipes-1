@@ -1,163 +1,183 @@
-
-
 header {
-  text-align: center;
-  padding: 10px;
-  background-color: #f7e4d4;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    background-color: #f7e4d4;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: bold;
-  text-transform: uppercase;
+    border-radius: 50%;
+    width: 175px ;
+    height: 120px;
+    padding: 5px 0px 5px 0px;
+}
+
+footer{
+    padding:  5px 0px 3px 5px;
+    background-color: #f7e4d4;
+}
+
+.ul-footer{
+    margin: 15px 0px 15px 0px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.soc{
+    text-align: center;
+    list-style-type: none;
 }
 
 .search-form {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .search-input {
-  border: none;
-  padding: 6px;
-  margin-right: 6px;
-  border-radius: 6px;
-  font-size: 14px;
+    border: none;
+    padding: 6px;
+    margin-right: 6px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 .search-button {
-  border: none;
-  background-color: #fcbf49;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
+    border: none;
+    background-color: #fcbf49;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .login-form {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .login-input {
-  border: none;
-  padding: 6px;
-  margin-right: 6px;
-  border-radius: 6px;
-  font-size: 14px;
+    border: none;
+    padding: 6px;
+    margin-right: 6px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 .login-button {
-  border: none;
-  background-color: #fcbf49;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
+    border: none;
+    background-color: #fcbf49;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 /* Стилизация на main */
 
 main {
-  padding: 20px;
+    margin: 15px;
+   position: relative;
+}
+
+.main-card{
+    margin:10px auto;
 }
 
 .recipe-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .recipe {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .recipe img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .recipe-title {
-  padding: 10px;
-  background-color: #fcbf49;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
+    padding: 10px;
+    background-color: #fcbf49;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .recipe-description {
-  padding: 10px;
-  font-size: 14px;
-  text-align: justify;
+    padding: 10px;
+    font-size: 14px;
+    text-align: justify;
 }
 
 .recipe-link {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  color: #fcbf49;
-  font-weight: bold;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: #fcbf49;
+    font-weight: bold;
 }
 
 .latest-recipes {
-  padding: 50px 0;
-  background-color: #f7f7f7;
+    padding: 50px 0;
+    background-color: #f7f7f7;
 }
 
 .latest-recipes h2 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
 }
 
 .latest-recipes-container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .recipe-card {
-  width: 300px;
-  margin: 0 20px 40px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+    width: 300px;
+    margin: 0 20px 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .recipe-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .recipe-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .recipe-card-info {
-  padding: 20px;
+    padding: 20px;
 }
 
 .recipe-card h3 {
-  margin-bottom: 10px;
-  font-size: 24px;
-  font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .recipe-card p {
-  margin-bottom: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #666;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
 }

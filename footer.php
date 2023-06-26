@@ -1,11 +1,21 @@
 <footer>
     <div class="container-fluid">
-        <ul>
+        <div class="row">
+        
+            <div class="col-md-6">
+                <ul class="ul-footer">
             <li><a href="#">За нас</a></li>
             <li><a href="#">Контакти</a></li>
+            </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="ul-footer">
             <li><a href="#">Защо да се регистрирам</a></li>
             <li><a href="#">Често задавани Въпроси</a></li>
-        </ul>
+            </ul>
+            </div>
+      
+            </div>
     </div>    
     <div class="container-fluid soc">
         <div class="row">					
@@ -35,8 +45,8 @@
             </div>
             <div class="col-lg-3 col-12">
                 <li><a href="https://www.instagram.com"
-                       title="Instagram"class="social-icon soc-icon-I">
-                        <i class="fab fa-instagram"></i>
+                       title="Instagram"class="social-icon soc-icon-TT">
+                        <i class="fab fa-tiktok"></i>
                     </a>
                 </li>
             </div>                                            

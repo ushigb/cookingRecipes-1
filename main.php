@@ -9,7 +9,7 @@
         <input type="submit" value="Добави">
     </form>
 
-    <div class="container-fluid">
+    <div class="container-fluid main-card">
         <div class="row">
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
