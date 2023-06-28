@@ -1,25 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Регистрация</title>
-    <link rel="stylesheet" href="style1.css">
-  </head>
-  <body>
-    <h1>Регистрация</h1>
-    <form action="" method="POST">
-      <label for="username">Потребителско име:</label>
-      <input type="text" id="username" name="username" required>
-      <br>
-      <label for="email">Имейл:</label>
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="password">Парола:</label>
-      <input type="password" id="password" name="password" required>
-      <br>
-      <label for="confirm-password">Потвърдете паролата:</label>
-      <input type="password" id="confirm-password" name="confirm-password" required>
-      <br>
-      <input type="submit" value="Регистрация">
-    </form>
-  </body>
-</html>
+<?php
+include 'head.php';
+include 'functions.php';
+?>
+
+<form method="post" action="register.php" class="access">
+
+    <div class="input-group-access">
+        <h4><label>Username:</label></h4>
+        <input type="text" name="username" value="<?php echo $username; ?>">
+    </div>
+    <div class="input-group-access">
+        <h4><label>Email:</label></h4>
+        <input type="email" name="email" value="<?php echo $email; ?>">
+    </div>
+    <div class="input-group-access">
+        <h4><label>Password:</label></h4>
+        <input type="password" name="password_1">
+    </div>
+    <div class="input-group-access">
+        <h4><label>Country:</label></h4>
+        <input type="text" name="country" value="<?php echo $country; ?>">
+    </div>        
+    <div class="reg-btn">
+        <button class="btn btn-outline-info" type="submit" name="register_btn">Register</button>
+        <div>
+            <?php echo display_error(); ?>
+        </div></div>
+    <div class="some">
+        <p>
+            Already a member? <a href="login.php">Sign in</a>
+        </p>
+        <a href="index.php">Back</a>
+    </div>
+</form>

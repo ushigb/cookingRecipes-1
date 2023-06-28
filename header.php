@@ -37,7 +37,7 @@
                 <input class="form-control me-1" type="text" placeholder="Username" name="username">
                 <input class="form-control me-1" type="text" placeholder="Password" name="psw">      
                 <button class="btn btn-outline-info" type="submit">Login</button>     
-                <a href="#">Register</a>       
+                <a href="register.php">Register</a>       
             </form>
         </div>
     </div>   
