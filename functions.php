@@ -74,6 +74,76 @@ function register() {
     }
 }
 
+if (isset($_POST['login_btn'])) {
+    login();
+}
+
+// LOGIN USER
+function login() {
+    global $conn, $username, $errors;
+
+
+    $id = e($_POST['user_id']);
+    $username = e($_POST['username']);
+    $password = e($_POST['psw']);
+
+
+    if (empty($username)) {
+        array_push($errors, "Username is required");
+    }
+    if (empty($password)) {
+        array_push($errors, "Password is required");
+    }
+
+
+    if (count($errors) == 0) {
+        $password = md5($password);
+
+        $query = "SELECT * FROM users WHERE username='$username' AND password='$password'  ";
+        $results = mysqli_query($conn, $query);
+
+        if (mysqli_num_rows($results) == 1) {
+
+            $logged_in_user = mysqli_fetch_assoc($results);
+            if ($logged_in_user['user_type'] == 'admin') {
+
+                $_SESSION['user'] = $logged_in_user;
+                $_SESSION['success'] = "You are now logged in";
+                header('location:index.php');
+            } else {
+                $_SESSION['user'] = $logged_in_user;
+                $_SESSION['success'] = "You are now logged in";
+
+                header('location: index.php');
+            }
+        } else {
+            array_push($errors, "Wrong username/password combination");
+        }
+    }
+}
+
+function isAdmin() {
+    if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function isLoggedIn() {
+    if (isset($_SESSION['user'])) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['user']);
+    header("location: index.php");
+}
+
 function display_error() {
     global $errors;
 

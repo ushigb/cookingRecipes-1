@@ -28,7 +28,7 @@ include 'functions.php';
         </div></div>
     <div class="some">
         <p>
-            Already a member? <a href="login.php">Sign in</a>
+            Already a member? <a href="login.php">Log In</a>
         </p>
         <a href="index.php">Back</a>
     </div>

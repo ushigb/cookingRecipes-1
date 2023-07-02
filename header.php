@@ -1,3 +1,8 @@
+<?php
+
+include 'functions.php';
+?>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -33,16 +38,44 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
-            <form action="/action_page.php">
+            
+            <?php
+    if (!$_SESSION) {
+        ?>
+            <form method="post" action="index.php">                
+                <div class="input-group-access">
+                <input type="hidden" name="user_id" >
+            </div>
                 <input class="form-control me-1" type="text" placeholder="Username" name="username">
-                <input class="form-control me-1" type="text" placeholder="Password" name="psw">      
-                <button class="btn btn-outline-info" type="submit">Login</button>     
-                <a href="register.php">Register</a>       
+                <input class="form-control me-1" type="text" placeholder="Password" name="psw"> 
+                <?php echo display_error(); ?>
+                <button class="btn btn-outline-info" type="submit" name="login_btn">Login</button>     
+                <a href="register.php">Register</a> 
+                
             </form>
         </div>
     </div>   
 </nav>
 
+<?php
+} else {
+    ?>
+    <div class="row">
+        <div class="col-md-6 nav-link ">
+            <h5><strong class="nav-link"><?php echo $_SESSION['user']['username']; ?></strong></h5>
+            <small>
+                <h6><i class="nav-link"  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['userType']); ?>)</i></h6> 
+                <br>
+            </small>
+            <h6><a class="logout" href="index.php?logout='1'" role="button">logout</a></h6>
+        </div> 
+                
+    </div>
+    </nav>
+
+    <?php
+}
+?>
 <header>
     <h1>Готварски рецепти</h1>
 </header>
